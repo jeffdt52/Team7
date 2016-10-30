@@ -31,9 +31,9 @@ BoardRow::BoardRow(int pos)
 class Board 
 {
 	public:
-		//Board(); //Constructor starts entire game and configures board.
+		Board(); //Constructor starts entire game and configures board.
 		//bool playCard(); //Puts a card on the field and changes player's turn
-		//void startGame();
+		void startGame();
 		//void startRound(); //Called at start of each round
 		//void endOfRound(); //Called when both players pass/run out of cards. Compares strength
 		//void endOfGame(); //Called when one or both player's points hit zero
@@ -52,9 +52,33 @@ class Board
 		int p1TotalStrength;
 		int p2TotalStrength;
 		int boardMod;
-		bool turn;
+		bool playerOneTurn;
+		
+		//int takeTurn();
 		//void pullHand(); //Fills each hand with 10 cards at start of game
 		//void initializeCards(); //Intializes both player's decks.
 		//void killCards(); //Places cards in used pile
 		//void changeModifier();
 }; 
+
+Board::Board() {
+	//Create a ton of cards and add them to each deck
+	
+	//draw 10 random cards and distribute to player hands
+	
+	//determine turn -> playerOneTurn true or false
+}
+
+void Board::startGame() {
+	//While both player's points < 2 {
+		//startRound()
+	
+		//While (TakeTurn() == 0) {} runs the turn sequence for the appropraite player. returns 0 if successful, 1 if pass
+	
+		//TakeTurn() this is the last turn
+	
+		//endOfRound()
+	//}
+	
+	//endGame
+}
